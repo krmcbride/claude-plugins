@@ -29,10 +29,10 @@
     {
       "name": "observability",
       "source": "./plugins/observability",
-      "description": "Observability and monitoring tools with Kubernetes integration",
+      "description": "Observability and monitoring tools with Kubernetes and Grafana integration",
       "version": "1.0.0",
       "category": "devops",
-      "tags": ["mcp", "k8s", "kubernetes", "monitoring"]
+      "tags": ["mcp", "k8s", "kubernetes", "grafana", "monitoring"]
     }
   ]
 }

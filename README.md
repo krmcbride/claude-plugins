@@ -26,7 +26,9 @@ LLM collaboration tools:
 ### Observability
 DevOps and monitoring tools:
 - **k8s MCP**: Kubernetes cluster management and monitoring via [krmcbride/mcp-k8s](https://github.com/krmcbride/mcp-k8s)
-  - Requires Go 1.24+ installed
+- **grafana MCP**: Grafana dashboards, datasources, alerting, and more via [grafana/mcp-grafana](https://github.com/grafana/mcp-grafana)
+  - Note: May be replaced with custom read-only Loki MCP in the future
+- Requires Go 1.24+ installed
 
 ## Installation
 
@@ -179,6 +181,10 @@ Model Context Protocol servers extend Claude's capabilities:
     "k8s": {
       "command": "go",
       "args": ["run", "github.com/krmcbride/mcp-k8s/cmd/server@latest"]
+    },
+    "grafana": {
+      "command": "go",
+      "args": ["run", "github.com/grafana/mcp-grafana/cmd/mcp-grafana@latest"]
     }
   }
 }
