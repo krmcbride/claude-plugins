@@ -1,0 +1,15 @@
+{
+  "name": "zen",
+  "version": "1.0.0",
+  "description": "Zen browser automation tools wrapped in specialized agents",
+  "author": {
+    "name": "Kevin McBride"
+  },
+  "mcpServers": {
+    "zen-browser": {
+      "command": "npx",
+      "args": ["-y", "@uplink-ai/mcp-zen@latest"]
+    }
+  },
+  "agents": {}
+}

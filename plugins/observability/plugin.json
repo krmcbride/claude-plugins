@@ -1,0 +1,14 @@
+{
+  "name": "observability",
+  "version": "1.0.0",
+  "description": "Observability and monitoring tools with Kubernetes integration",
+  "author": {
+    "name": "Kevin McBride"
+  },
+  "mcpServers": {
+    "k8s": {
+      "command": "npx",
+      "args": ["-y", "krmcbride/mcp-k8s"]
+    }
+  }
+}

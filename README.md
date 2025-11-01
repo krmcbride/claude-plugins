@@ -1,14 +1,31 @@
 # Claude Plugins
 
-Personal collection of Claude Code hooks, agents, and custom commands.
+Personal collection of Claude Code plugins with MCP servers, agents, and automation tools.
 
 ## What is This?
 
-This repository serves as a **plugin marketplace** for Claude Code. It allows you to organize and share your custom Claude Code extensions including:
+This repository serves as a **plugin marketplace** for Claude Code. It provides productivity plugins that integrate:
 
-- **Hooks**: Automated scripts triggered by Claude Code events (e.g., tool-invoked, user-prompt-submit)
-- **Commands**: Custom slash commands (e.g., `/hello`, `/deploy`)
+- **MCP Servers**: Model Context Protocol servers for extended capabilities
 - **Agents**: Specialized AI agents with specific expertise
+- **Hooks**: Automated scripts triggered by Claude Code events
+- **Commands**: Custom slash commands for common workflows
+
+## Available Plugins
+
+### Essentials
+Essential tools for any project:
+- **context7 MCP**: Enhanced context and code understanding
+- **code-janitor agent**: Automated code cleanup using Claude 3.5 Haiku
+
+### Zen
+Browser automation and testing:
+- **zen-browser MCP**: Zen browser automation tools
+- Specialized agents for common browser automation tasks (coming soon)
+
+### Observability
+DevOps and monitoring tools:
+- **k8s MCP**: Kubernetes cluster management and monitoring via [krmcbride/mcp-k8s](https://github.com/krmcbride/mcp-k8s)
 
 ## Installation
 
@@ -22,7 +39,7 @@ To use plugins from this marketplace in Claude Code:
 /plugin add-marketplace /path/to/claude-plugins
 
 # Install a specific plugin
-/plugin install example-command
+/plugin install essentials
 
 # List available plugins
 /plugin list
@@ -35,11 +52,13 @@ claude-plugins/
 ├── .claude-plugin/
 │   └── marketplace.json          # Marketplace configuration
 ├── plugins/
-│   ├── example-hook/
-│   │   └── plugin.json            # Hook plugin manifest
-│   └── example-command/
-│       ├── plugin.json            # Command plugin manifest
-│       └── hello.md               # Command implementation
+│   ├── essentials/
+│   │   ├── plugin.json           # MCP servers & agents
+│   │   └── code-janitor.md       # Agent prompt
+│   ├── zen/
+│   │   └── plugin.json           # Browser automation MCP
+│   └── observability/
+│       └── plugin.json           # K8s MCP server
 └── README.md
 ```
 
@@ -131,7 +150,38 @@ Custom slash commands that extend Claude's capabilities:
 
 ### Agents
 
-Specialized agents with specific expertise (coming soon).
+Specialized agents with specific expertise and custom models:
+
+```json
+{
+  "agents": {
+    "code-janitor": {
+      "description": "Cleanup agent for fixing lint errors",
+      "path": "code-janitor.md",
+      "model": "claude-3-5-haiku-20241022"
+    }
+  }
+}
+```
+
+### MCP Servers
+
+Model Context Protocol servers extend Claude's capabilities:
+
+```json
+{
+  "mcpServers": {
+    "context7": {
+      "command": "npx",
+      "args": ["-y", "@uplink-ai/mcp-context7@latest"]
+    },
+    "k8s": {
+      "command": "npx",
+      "args": ["-y", "krmcbride/mcp-k8s"]
+    }
+  }
+}
+```
 
 ## Marketplace Configuration
 

@@ -11,20 +11,28 @@
   },
   "plugins": [
     {
-      "name": "example-hook",
-      "source": "./plugins/example-hook",
-      "description": "Example hook that demonstrates tool-invoked hooks",
+      "name": "essentials",
+      "source": "./plugins/essentials",
+      "description": "Essential tools and agents for any project - includes context7 MCP and code-janitor cleanup agent",
       "version": "1.0.0",
-      "category": "hooks",
-      "tags": ["example", "hooks", "demo"]
+      "category": "productivity",
+      "tags": ["mcp", "agent", "cleanup", "context7"]
     },
     {
-      "name": "example-command",
-      "source": "./plugins/example-command",
-      "description": "Example custom slash command for Claude Code",
+      "name": "zen",
+      "source": "./plugins/zen",
+      "description": "Zen browser automation tools wrapped in specialized agents",
       "version": "1.0.0",
-      "category": "commands",
-      "tags": ["example", "commands", "demo"]
+      "category": "automation",
+      "tags": ["mcp", "browser", "automation", "zen"]
+    },
+    {
+      "name": "observability",
+      "source": "./plugins/observability",
+      "description": "Observability and monitoring tools with Kubernetes integration",
+      "version": "1.0.0",
+      "category": "devops",
+      "tags": ["mcp", "k8s", "kubernetes", "monitoring"]
     }
   ]
 }

@@ -1,0 +1,21 @@
+{
+  "name": "essentials",
+  "version": "1.0.0",
+  "description": "Essential tools and agents for any project - includes context7 MCP and code-janitor cleanup agent",
+  "author": {
+    "name": "Kevin McBride"
+  },
+  "mcpServers": {
+    "context7": {
+      "command": "npx",
+      "args": ["-y", "@uplink-ai/mcp-context7@latest"]
+    }
+  },
+  "agents": {
+    "code-janitor": {
+      "description": "Cleanup agent using Haiku to fix lint errors and perform code maintenance",
+      "path": "code-janitor.md",
+      "model": "claude-3-5-haiku-20241022"
+    }
+  }
+}
