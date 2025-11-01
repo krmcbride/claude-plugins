@@ -7,8 +7,8 @@
   },
   "mcpServers": {
     "k8s": {
-      "command": "npx",
-      "args": ["-y", "krmcbride/mcp-k8s"]
+      "command": "go",
+      "args": ["run", "github.com/krmcbride/mcp-k8s/cmd/server@latest"]
     }
   }
 }

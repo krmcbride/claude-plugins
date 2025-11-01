@@ -26,6 +26,7 @@ LLM collaboration tools:
 ### Observability
 DevOps and monitoring tools:
 - **k8s MCP**: Kubernetes cluster management and monitoring via [krmcbride/mcp-k8s](https://github.com/krmcbride/mcp-k8s)
+  - Requires Go 1.24+ installed
 
 ## Installation
 
@@ -176,8 +177,8 @@ Model Context Protocol servers extend Claude's capabilities:
       "args": ["-y", "@uplink-ai/mcp-context7@latest"]
     },
     "k8s": {
-      "command": "npx",
-      "args": ["-y", "krmcbride/mcp-k8s"]
+      "command": "go",
+      "args": ["run", "github.com/krmcbride/mcp-k8s/cmd/server@latest"]
     }
   }
 }
