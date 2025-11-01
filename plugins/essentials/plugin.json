@@ -15,7 +15,7 @@
     "code-janitor": {
       "description": "Cleanup agent using Haiku to fix lint errors and perform code maintenance",
       "path": "code-janitor.md",
-      "model": "claude-3-5-haiku-20241022"
+      "model": "haiku"
     }
   }
 }
