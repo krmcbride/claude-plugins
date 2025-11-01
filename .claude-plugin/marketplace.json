@@ -1,8 +1,8 @@
 {
   "name": "personal-claude-plugins",
   "owner": {
-    "name": "Your Name",
-    "email": "[email protected]"
+    "name": "Kevin McBride",
+    "email": "krmcbride@users.noreply.github.com"
   },
   "metadata": {
     "description": "Personal collection of Claude Code hooks, agents, and custom commands",
