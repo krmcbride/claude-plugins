@@ -19,9 +19,9 @@ Essential tools for any project:
 - **code-janitor agent**: Automated code cleanup using Claude 3.5 Haiku
 
 ### Zen
-Browser automation and testing:
-- **zen-browser MCP**: Zen browser automation tools
-- Specialized agents for common browser automation tasks (coming soon)
+LLM collaboration tools:
+- **zen MCP**: Collaboration between Claude and other LLMs via [BeehiveInnovations/zen-mcp-server](https://github.com/BeehiveInnovations/zen-mcp-server)
+- Specialized agents for multi-LLM workflows (coming soon)
 
 ### Observability
 DevOps and monitoring tools:
@@ -56,7 +56,7 @@ claude-plugins/
 │   │   ├── plugin.json           # MCP servers & agents
 │   │   └── code-janitor.md       # Agent prompt
 │   ├── zen/
-│   │   └── plugin.json           # Browser automation MCP
+│   │   └── plugin.json           # LLM collaboration MCP
 │   └── observability/
 │       └── plugin.json           # K8s MCP server
 └── README.md

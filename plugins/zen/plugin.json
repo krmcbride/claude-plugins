@@ -1,14 +1,14 @@
 {
   "name": "zen",
   "version": "1.0.0",
-  "description": "Zen browser automation tools wrapped in specialized agents",
+  "description": "Zen MCP server for collaboration between Claude and other LLMs",
   "author": {
     "name": "Kevin McBride"
   },
   "mcpServers": {
-    "zen-browser": {
+    "zen": {
       "command": "npx",
-      "args": ["-y", "@uplink-ai/mcp-zen@latest"]
+      "args": ["-y", "BeehiveInnovations/zen-mcp-server"]
     }
   },
   "agents": {}

@@ -21,10 +21,10 @@
     {
       "name": "zen",
       "source": "./plugins/zen",
-      "description": "Zen browser automation tools wrapped in specialized agents",
+      "description": "Zen MCP server for collaboration between Claude and other LLMs",
       "version": "1.0.0",
-      "category": "automation",
-      "tags": ["mcp", "browser", "automation", "zen"]
+      "category": "collaboration",
+      "tags": ["mcp", "llm", "collaboration", "zen"]
     },
     {
       "name": "observability",
