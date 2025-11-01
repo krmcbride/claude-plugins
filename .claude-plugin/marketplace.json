@@ -1,0 +1,30 @@
+{
+  "name": "personal-claude-plugins",
+  "owner": {
+    "name": "Your Name",
+    "email": "[email protected]"
+  },
+  "metadata": {
+    "description": "Personal collection of Claude Code hooks, agents, and custom commands",
+    "version": "1.0.0",
+    "repository": "https://github.com/krmcbride/claude-plugins"
+  },
+  "plugins": [
+    {
+      "name": "example-hook",
+      "source": "./plugins/example-hook",
+      "description": "Example hook that demonstrates tool-invoked hooks",
+      "version": "1.0.0",
+      "category": "hooks",
+      "tags": ["example", "hooks", "demo"]
+    },
+    {
+      "name": "example-command",
+      "source": "./plugins/example-command",
+      "description": "Example custom slash command for Claude Code",
+      "version": "1.0.0",
+      "category": "commands",
+      "tags": ["example", "commands", "demo"]
+    }
+  ]
+}

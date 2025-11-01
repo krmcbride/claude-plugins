@@ -1,0 +1,14 @@
+{
+  "name": "example-hook",
+  "version": "1.0.0",
+  "description": "Example hook that demonstrates tool-invoked hooks",
+  "author": {
+    "name": "Your Name"
+  },
+  "hooks": {
+    "tool-invoked": {
+      "description": "Example hook that runs after tools are invoked",
+      "command": "echo 'Tool invoked hook executed!'"
+    }
+  }
+}
