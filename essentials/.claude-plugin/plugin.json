@@ -1,0 +1,8 @@
+{
+  "name": "essentials",
+  "description": "Essential tooling for discovering docs, cleaning up code, thinking through complex problems.",
+  "version": "0.1.0",
+  "author": {
+    "name": "Kevin McBride"
+  }
+}
