@@ -9,8 +9,8 @@
     {
       "name": "essentials",
       "source": "./essentials",
-      "description": "Essential tooling for discovering docs, cleaning up code, thinking through complex problems.",
-      "version": "0.1.0",
+      "description": "Essential tooling for discovering docs, cleaning up code, and deep thinking.",
+      "version": "0.2.0",
       "author": {
         "name": "Kevin McBride"
       },
