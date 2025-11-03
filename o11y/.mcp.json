@@ -1,0 +1,13 @@
+{
+  "mcpServers": {
+    "k8s": {
+      "type": "stdio",
+      "command": "go",
+      "args": [
+        "run",
+        "github.com/krmcbride/mcp-k8s/cmd/server@latest"
+      ],
+      "env": {}
+    }
+  }
+}
