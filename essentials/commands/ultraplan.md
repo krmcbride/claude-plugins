@@ -4,9 +4,9 @@ argument-hint: prompt
 disable-model-invocation: true
 ---
 
-# ThinkDeep Investigation Workflow
+# UltraPlan Investigation Workflow
 
-Conduct a **deep, systematic investigation** of the following problem using the ThinkDeep methodology. This approach prevents shallow analysis by enforcing multiple investigation steps with progressive confidence building.
+Conduct a **deep, systematic investigation** of the following problem using the UltraPlan methodology. This approach prevents shallow analysis by enforcing multiple investigation steps with progressive confidence building.
 
 **Problem to investigate:** $ARGUMENTS
 
@@ -70,10 +70,10 @@ Maintain this state structure throughout the investigation:
 - Review logs, errors, or metrics if applicable
 - List what you know vs. what you need to discover
 
-**When done:** Launch the `thinkdeep-investigator` agent with your findings:
+**When done:** Launch the `ultraplan-investigator` agent with your findings:
 
 ```
-I'm launching the thinkdeep-investigator agent to review my initial findings and guide the next investigation step.
+I'm launching the ultraplan-investigator agent to review my initial findings and guide the next investigation step.
 ```
 
 Pass the agent:
@@ -122,7 +122,7 @@ When your confidence is **"high"** or higher and you believe investigation is co
 
 **If confidence is "high" or "very_high":**
 
-- Launch the `thinkdeep-analyzer` agent for independent validation
+- Launch the `ultraplan-analyzer` agent for independent validation
 - Pass ALL accumulated state (all findings from all steps)
 - Include full file paths for the analyzer to read
 - The analyzer acts as a senior engineering collaborator who will:
@@ -136,7 +136,7 @@ When your confidence is **"high"** or higher and you believe investigation is co
 Present your final analysis in this structure:
 
 ```markdown
-# ThinkDeep Analysis: [Problem Statement]
+# UltraPlan Analysis: [Problem Statement]
 
 ## Investigation Summary
 

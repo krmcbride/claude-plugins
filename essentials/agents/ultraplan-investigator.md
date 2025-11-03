@@ -1,5 +1,5 @@
 ---
-name: thinkdeep-investigator
+name: ultraplan-investigator
 description: Reviews investigation findings and guides next steps in deep analysis workflow. Assesses confidence levels and identifies knowledge gaps. Use iteratively during multi-step investigations to ensure thorough coverage.
 model: haiku
 ---
