@@ -1,6 +1,7 @@
 ---
 description: Conduct deep systematic investigation of complex problems using multi-step analysis with confidence tracking
-argument-hint: prompt to apply deep thinking to
+argument-hint: prompt
+disable-model-invocation: true
 ---
 
 # ThinkDeep Investigation Workflow
