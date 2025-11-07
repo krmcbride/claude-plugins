@@ -9,15 +9,16 @@
     {
       "name": "essentials",
       "source": "./essentials",
-      "description": "Essential tooling for discovering docs, cleaning up code, and deep thinking.",
+      "description": "Essential tooling for discovering docs, cleaning up code, deep thinking (ultraplan), and systematic code review.",
       "version": "0.4.0",
       "author": {
         "name": "Kevin McBride"
       },
       "keywords": [
+        "codereview",
         "consensus",
         "context7",
-        "deepthinking",
+        "ultraplan",
         "essential"
       ]
     },

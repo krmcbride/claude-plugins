@@ -1,6 +1,6 @@
 # Claude Code Plugin Marketplace
 
-A personal plugin marketplace for [Claude Code](https://claude.com/code) featuring essential tools for deep investigation, documentation lookup, and code maintenance.
+A personal plugin marketplace for [Claude Code](https://claude.com/code) featuring essential tools for deep investigation, systematic code review, documentation lookup, and code maintenance.
 
 ## Quick Start
 
@@ -15,7 +15,7 @@ A personal plugin marketplace for [Claude Code](https://claude.com/code) featuri
 
 ### Essentials
 
-Essential tooling for discovering docs, cleaning up code, and deep thinking.
+Essential tooling for discovering docs, cleaning up code, deep thinking (ultraplan), and systematic code review.
 
 **Features:**
 
@@ -35,6 +35,39 @@ Systematic multi-step investigation of complex problems with confidence-based pr
 - Final comprehensive analysis agent (`ultraplan-analyzer`) for validation
 - Practical engineering focus with trade-off analysis
 - Implementation options with pros/cons (similar to Claude Code plan mode)
+
+#### CodeReview - Systematic Code Analysis
+
+Multi-step code review with severity-classified findings and actionable fixes.
+
+```bash
+/codereview src/auth.py src/middleware.py
+```
+
+**What it does:**
+- Progressive confidence tracking (exploring → low → medium → high → certain)
+- Severity classification for all issues (🔴 CRITICAL, 🟠 HIGH, 🟡 MEDIUM, 🟢 LOW)
+- Multi-step investigation with state accumulation
+- Iterative guidance agent (`codereview-investigator`) for coverage validation
+- Final comprehensive analysis agent (`codereview-analyzer`) for independent review
+- Actionable fixes with before/after code examples
+- Top 3 priorities with effort estimates
+- Quick wins vs. long-term improvements
+
+**Focus areas:**
+- Security vulnerabilities (SQL injection, XSS, hardcoded secrets, auth gaps)
+- Concurrency issues (race conditions, deadlocks, thread-safety)
+- Resource management (memory leaks, unclosed connections)
+- Error handling gaps
+- Performance bottlenecks (algorithmic complexity, N+1 queries)
+- Code quality and maintainability
+
+**Best for:**
+- Security audits before production
+- Bug investigation and root cause analysis
+- Performance bottleneck identification
+- Code quality assessment
+- Pre-deployment validation
 
 #### Documentation Lookup Skill
 

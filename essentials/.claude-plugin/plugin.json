@@ -1,7 +1,7 @@
 {
   "name": "essentials",
-  "description": "Essential tooling for discovering docs, cleaning up code, and deep thinking.",
-  "version": "0.4.0",
+  "description": "Essential tooling for discovering docs, cleaning up code, deep thinking (ultraplan), and systematic code review.",
+  "version": "0.5.0",
   "author": {
     "name": "Kevin McBride"
   }
