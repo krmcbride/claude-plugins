@@ -31,8 +31,8 @@ Systematic multi-step investigation of complex problems with confidence-based pr
 
 - Progressive confidence tracking (exploring → low → medium → high → certain)
 - Multi-step investigation with state accumulation
-- Iterative guidance agent (`ultraplan-investigator`) for next-step suggestions
-- Final comprehensive analysis agent (`ultraplan-analyzer`) for validation
+- Iterative Haiku agent guidance for next-step suggestions
+- Final Sonnet agent validation for comprehensive analysis
 - Practical engineering focus with trade-off analysis
 - Implementation options with pros/cons (similar to Claude Code plan mode)
 
@@ -45,16 +45,18 @@ Multi-step code review with severity-classified findings and actionable fixes.
 ```
 
 **What it does:**
+
 - Progressive confidence tracking (exploring → low → medium → high → certain)
 - Severity classification for all issues (🔴 CRITICAL, 🟠 HIGH, 🟡 MEDIUM, 🟢 LOW)
 - Multi-step investigation with state accumulation
-- Iterative guidance agent (`codereview-investigator`) for coverage validation
-- Final comprehensive analysis agent (`codereview-analyzer`) for independent review
+- Iterative Haiku agent guidance for coverage validation
+- Final Sonnet agent validation for independent review
 - Actionable fixes with before/after code examples
 - Top 3 priorities with effort estimates
 - Quick wins vs. long-term improvements
 
 **Focus areas:**
+
 - Security vulnerabilities (SQL injection, XSS, hardcoded secrets, auth gaps)
 - Concurrency issues (race conditions, deadlocks, thread-safety)
 - Resource management (memory leaks, unclosed connections)
@@ -63,6 +65,7 @@ Multi-step code review with severity-classified findings and actionable fixes.
 - Code quality and maintainability
 
 **Best for:**
+
 - Security audits before production
 - Bug investigation and root cause analysis
 - Performance bottleneck identification
@@ -71,14 +74,29 @@ Multi-step code review with severity-classified findings and actionable fixes.
 
 #### Documentation Lookup Skill
 
-Automatically fetches library documentation using Context7 MCP integration.
+Fetches library documentation via Context7's HTTP API using the "code execution" pattern.
 
 **What it does:**
 
 - Proactively activates when you mention libraries or frameworks
-- Searches Context7 for up-to-date documentation
+- Writes curl commands to fetch documentation from Context7 API
+- Two-step process: search for library ID, then fetch docs
 - Falls back to web search if needed
 - Use: "Check the docs for..."
+
+**Why code execution?** Instead of always loading MCP tool definitions into context, Claude writes API calls only when needed—reducing context usage and demonstrating the pattern from [Anthropic's code execution blog post](https://www.anthropic.com/engineering/code-execution-with-mcp).
+
+#### Code Examples Skill
+
+Find real-world code examples across millions of GitHub repositories using [grep.app](https://grep.app).
+
+**What it does:**
+
+- Finds how others implement specific patterns in production code
+- Filters by language, repository, or file path
+- Use: "How do others implement X?" or "Show me usage examples for..."
+
+**Complements documentation-lookup:** While documentation-lookup fetches official docs, code-examples finds real-world usage in production code.
 
 #### Code Janitor Agent
 
@@ -102,10 +120,10 @@ Analyze complex decisions from multiple viewpoints using specialized debate agen
 
 **What it does:**
 
-- Launches three specialized agents to analyze your decision:
-  - `consensus-for` - Advocates for the proposal with optimistic perspective
-  - `consensus-against` - Critiques the proposal rigorously
-  - `consensus-neutral` - Provides objective analysis weighing evidence
+- Launches three parallel Sonnet agents with distinct analytical stances:
+  - **FOR** - Advocates for the proposal with optimistic perspective
+  - **AGAINST** - Critiques the proposal rigorously
+  - **NEUTRAL** - Provides objective analysis weighing evidence
 - Presents balanced view of trade-offs and considerations
 - Helps avoid confirmation bias in decision-making
 
@@ -131,7 +149,6 @@ essentials/
 ## Requirements
 
 - Claude Code installed and configured
-- For documentation lookup: Context7 MCP server (included in essentials plugin)
 
 ## License
 
