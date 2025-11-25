@@ -1,6 +1,7 @@
 ---
 description: Conduct systematic multi-step code review with severity-classified findings and actionable fixes
 argument-hint: files to review and optional focus areas
+disable-model-invocation: true
 ---
 
 # CodeReview Investigation Workflow
