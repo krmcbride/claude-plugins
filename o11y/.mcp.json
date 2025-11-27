@@ -8,6 +8,15 @@
         "github.com/krmcbride/mcp-k8s/cmd/server@latest"
       ],
       "env": {}
+    },
+    "grafana": {
+      "type": "stdio",
+      "command": "go",
+      "args": [
+        "run",
+        "github.com/krmcbride/mcp-grafana/cmd/server@latest"
+      ],
+      "env": {}
     }
   }
 }
