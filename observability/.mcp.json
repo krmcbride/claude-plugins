@@ -5,7 +5,7 @@
       "command": "go",
       "args": [
         "run",
-        "github.com/krmcbride/mcp-k8s/cmd/server@latest"
+        "github.com/krmcbride/mcp-k8s/cmd/server@v0.1.0"
       ],
       "env": {}
     },
@@ -14,7 +14,7 @@
       "command": "go",
       "args": [
         "run",
-        "github.com/krmcbride/mcp-grafana/cmd/server@latest"
+        "github.com/krmcbride/mcp-grafana/cmd/server@v0.1.0"
       ],
       "env": {}
     }
