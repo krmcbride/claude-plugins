@@ -1,5 +1,5 @@
 {
-  "name": "o11y",
+  "name": "observability",
   "description": "Observability and monitoring integrations",
   "version": "0.2.0",
   "author": {
